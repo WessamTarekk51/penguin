@@ -240,36 +240,41 @@ new Vue({
             if (element.type == 1) {
                 for (const el of element.content[this.index - 1].input.valid) {
                     if (el === event.target.value.trim()) {
-                        event.target.classList.add('true')
-                        event.target.classList.remove('false')
+                        event.target.classList.add('right')
+                        event.target.classList.remove('wrong')
                         event.target.classList.remove('emptyInput')
                         break
                     } else {
                         event.target.classList.remove('right')
-                        event.target.classList.add('false')
+                        event.target.classList.add('wrong')
                         event.target.classList.add('emptyInput')
                     }
                 }
             } else {
-                for (const el of this.answers) {
-                  if (el === event.target.value.trim()) {
-                    let idx = this.answers.indexOf(event.target.value)
-                    this.answers.splice(idx, 1)
-                    event.target.classList.add('true')
-                    event.target.classList.remove('false')
-                    event.target.classList.remove('emptyInput')
-                    break
-                  } else {
-                    event.target.classList.remove('true')
-                    event.target.classList.add('wrong')
-                    event.target.classList.add('emptyInput')
-                  }
-                }
-              }
+                this.answers=element.content[this.index - 1].input.valid
+                console.log(this.answers)
+                for (const el of element.content[this.index - 1].input.valid) {
+                    this.answers=el
+                    console.log(this.answers)
+                    if (el === event.target.value.trim()) {
+                        let idx = this.answers.indexOf(event.target.value)
+                        console.log(idx)
+                        // this.answers.value.splice(idx, 1)
+                        event.target.classList.add('right')
+                        event.target.classList.remove('wrong')
+                        event.target.classList.remove('emptyInput')
+                        break
+                    } else {
+                        event.target.classList.remove('right')
+                        event.target.classList.add('wrong')
+                        event.target.classList.add('emptyInput')
+                    }
+            }
+            }
 
             this.posts[0].items.forEach((el) => {
                 if (el.active) {
-                    el.correctCounter = document.querySelectorAll('.active .true').length
+                    el.correctCounter = document.querySelectorAll('.active .right').length
                     if (element.correctCounter == element.numberOfquestion) {
                         this.character = true
                         // setTimeout(() => {
@@ -305,10 +310,10 @@ new Vue({
             this.clickBtn.src = '/assets/audios/click_btn.mp3'
             this.clickBtn.play()
             this.count = 0
-            this.rightBox = document.querySelectorAll('.active .true')
+            this.rightBox = document.querySelectorAll('.active .right')
             this.posts[0].items.forEach((el) => {
                 if (el.active) {
-                    el.correctCounter = document.querySelectorAll('.active .true').length
+                    el.correctCounter = document.querySelectorAll('.active .right').length
                 }
             })
             this.rightBox.forEach((elem) => {
