@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../assets/penguin/ground.png);
+  background-image: url(../images/penguin/ground.png);
   position: relative;
 }
 body .Logo {
@@ -40,7 +40,7 @@ body .Logo {
   background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(../assets/penguin/selah.png);
+  background-image: url(../images/penguin/selah.png);
 }
 
 .number {
@@ -59,7 +59,7 @@ body .Logo {
   left: 0;
   bottom: 24%;
   margin: auto;
-  background-image: url(../assets/penguin/start.png);
+  background-image: url(../images/penguin/start.png);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -84,10 +84,10 @@ body .Logo {
           user-select: none;
 }
 .digital-screen .music.play {
-  background-image: url(../assets/penguin/music.png);
+  background-image: url(../images/penguin/music.png);
 }
 .digital-screen .music.mute {
-  background-image: url(../assets/penguin/mute-music.png);
+  background-image: url(../images/penguin/mute-music.png);
 }
 .digital-screen .penguin {
   width: 100%;
@@ -110,7 +110,7 @@ body .Logo {
   background-size: 100%;
   background-repeat: no-repeat;
   pointer-events: none;
-  background-image: url(../assets/penguin/question.png);
+  background-image: url(../images/penguin/question.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,10 +215,10 @@ body .Logo {
       -ms-flex-align: center;
           align-items: center;
   color: #2F89D3;
-  background-image: url(../assets/penguin/try-active.png);
+  background-image: url(../images/penguin/try-active.png);
 }
 .digital-screen .penguin .border .try-active.try {
-  background-image: url(../assets/penguin/try.png);
+  background-image: url(../images/penguin/try.png);
   color: #767676;
 }
 .digital-screen .penguin .border .button {
@@ -231,6 +231,7 @@ body .Logo {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+  pointer-events: auto;
 }
 .digital-screen .penguin .border .button.check {
   right: 77vh;
@@ -241,33 +242,31 @@ body .Logo {
   top: 0vh;
 }
 .digital-screen .penguin .border .button.next {
-  right: 2vh;
+  right: 3vh;
   top: 31vh;
   width: 9vh !important;
   height: 9vh !important;
 }
 .digital-screen .penguin .border .button.btn-check-active {
-  background-image: url(../assets/penguin/check-active.png);
-  pointer-events: auto;
+  background-image: url(../images/penguin/check-active.png);
 }
 .digital-screen .penguin .border .button.btn-answer-active {
-  background-image: url(../assets/penguin/answer-active.png);
-  pointer-events: auto;
+  background-image: url(../images/penguin/answer-active.png);
 }
 .digital-screen .penguin .border .button.btn-next-active {
-  background-image: url(../assets/penguin/next-active.png);
-  pointer-events: auto;
+  background-image: url(../images/penguin/next-active.png);
   opacity: 1;
 }
 .digital-screen .penguin .border .button.btn-check {
-  background-image: url(../assets/penguin/check.png);
+  background-image: url(../images/penguin/check.png);
 }
 .digital-screen .penguin .border .button.btn-answer {
-  background-image: url(../assets/penguin/answer.png);
+  background-image: url(../images/penguin/answer.png);
 }
 .digital-screen .penguin .border .button.btn-next {
-  background-image: url(../assets/penguin/next.png);
+  background-image: url(../images/penguin/next.png);
   opacity: 0;
+  pointer-events: none;
 }
 .digital-screen .penguin .border .button.pointer-none {
   pointer-events: none !important;
@@ -316,7 +315,7 @@ body .Logo {
   font-family: "Times New Roman", Times, serif;
 }
 .digital-screen .penguin .border .question input {
-  background-image: url(/assets/penguin/input.png);
+  background-image: url(../images/penguin/input.png);
   background-repeat: no-repeat;
   background-size: contain;
   border: 0;
@@ -330,15 +329,16 @@ body .Logo {
   color: white;
   margin: 1vw;
 }
-.digital-screen .penguin .border .question input.true, .digital-screen .penguin .border .question input.right {
-  background-image: url(/assets/penguin/true.png) !important;
+.digital-screen .penguin .border .question input.right {
+  background-image: url(../images/penguin/true.png) !important;
   pointer-events: none;
 }
-.digital-screen .penguin .border .question input.false, .digital-screen .penguin .border .question input.wrong {
-  background-image: url(/assets/penguin/false.png) !important;
+.digital-screen .penguin .border .question input.wrong {
+  background-image: url(../images/penguin/false.png) !important;
 }
 .digital-screen .penguin .border .question input.displayinput {
-  background-image: url(/assets/penguin/displayinput.png);
+  background-image: url(../images/penguin/displayinput.png);
+  pointer-events: none;
 }
 .digital-screen .penguin .penguinCharacter {
   position: relative;
@@ -378,7 +378,7 @@ body .Logo {
   background-repeat: no-repeat;
   -webkit-animation: fade 0.3s linear;
           animation: fade 0.3s linear;
-  background-image: url(../assets/penguin/empty.png);
+  background-image: url(../images/penguin/empty.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,22 +394,39 @@ body .Logo {
           flex-direction: column;
 }
 .nextContent .character .penguin {
-  width: 35vh;
-  height: 35vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .nextContent .character .penguin.feedbacktrue {
-  background-image: url(../assets/penguin/feedbacktrue.png);
+  background-image: url(../images/penguin/feedbacktrue.png);
+  width: 35vh;
+  height: 35vh;
 }
 .nextContent .character .penguin.feedbackfalse {
-  background-image: url(../assets/penguin/feedbackfalse.png);
+  background-image: url(../images/penguin/feedbackfalse.png);
+  width: 35vh;
+  height: 33vh;
 }
 .nextContent .character .type {
   margin-top: 1vh;
-  font-size: 7vh;
+  font-size: 5vh;
   color: #22649C !important;
   font-weight: bold;
+  background-image: url(../images//penguin/estimationBk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3vh;
+  width: 26vh;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nextContent .character .buttons {
   position: absolute;
@@ -456,7 +473,7 @@ body .Logo {
 
 .image {
   width: 3vh;
-  height: 25vh;
+  height: 30vh;
   padding-right: 5vh;
 }
 

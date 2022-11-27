@@ -1,6 +1,6 @@
 let penguinCharacter = bodymovin.loadAnimation({
     container: document.getElementById('penguinCharacter'),
-    path: './content/json/Penguin.json', // required
+    path: './assets/json/Penguin.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Penguin</title>
+  <script src="./assets/js/Lottie-min.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel='icon' href='./assets/images/penguin/favicon.ico' type='image/x-icon' />
+</head>
+
+<body>
+  <div class="Logo"></div>
+  <div id="penguin" data-urlpage="mymovie">
+    <div class="main" v-show="!startLo">
+      <div>
+        <div class="startButton" @click="start()"></div>
+      </div>
+    </div>
+    <div class="digital-screen" v-show="startLo" @click="setclick()">
+      <div class="music" @click="muteMusic()" :class="{'play' : music ,'mute' : !music}">
+      </div>
+      <div class="penguin">
+        <div class="border">
+          <div class="button check  btn-check-active" @click="checkanswer();">
+            <div class="help help-check" v-if="this.checkHand && this.counter == 0"></div>
+          </div>
+          <div class="button answer btn-answer-active" @click="answer()">
+            <div class="help help-check" v-if="this.answerHand && this.counter == 0"></div>
+          </div>
+          <div class="button next btn-next" @click="next();">
+            <div class="help help-check" v-if="this.nextHand && this.counter == 0"></div>
+          </div>
+          <div class="question center" v-for="(item,index) in this.posts[0].items" :class="{'active': item.active}">
+            <div class="type-question">
+              <p class="text" v-for="(parag) in item.parag" v-html="parag"></p>
+              <div class="break"></div>
+              <div class="flex">
+                <div class="center">
+                  <template v-if="item.type==1">
+                    <input class="emptyInput number input" type="text" index="1" @keyup="maxLength($event, item)"
+                      inputType="1" @change="checkvalue($event,item)" @focus="focusin($event)" @click="foucs($event);"
+                      maxlength="1" @focusout="focusout($event)">
+                    <div class="help  help-input" v-if="counter == 0 && helpHand"></div>
+                  </template>
+                  <template v-if="item.type == 2">
+                    <template v-for="(e,idx) in  item.content[0].input.nums">
+                      <!-- <template v-if=" item.content[0].input.nums > idx"> -->
+                      <input class="emptyInput input" type="text" index="idx+1" index="1" maxlength="1"
+                        @keyup="maxLength($event,item)" inputType="2" @change="checkvalue($event,item)"
+                        @focus="focusin($event)" @click="foucs($event);">
+                    </template>
+                    <!-- </template> -->
+                  </template>
+                </div>
+                <img class="image" :src="item.image" alt="">
+                <div class="flex-colum">
+                  <p class="text" v-html="item.parag2" style="font-size: 2.5vh; margin-top: 2.3vh;"></p>
+                  <p class="text" v-html="item.parag3" style="font-size: 2.5vh; margin-bottom: 2.8vh;"></p>
+                </div>
+              </div>
+              <p class="text" v-html="item.parag4"></p>
+              <template v-if="item.type==1">
+                <input class="emptyInput number input" type="text" index="2" @keyup="maxLength($event, item)"
+                  inputType="1" @change="checkvalue($event,item)" @focus="focusin($event)" @click="foucs($event);"
+                  maxlength="1" @focusout="focusout($event)">
+              </template>
+            </div>
+
+          </div>
+        </div>
+        <div class="penguinCharacter">
+          <div id="penguinCharacter"></div>
+        </div>
+      </div>
+    </div>
+    <div v-if="question">
+      <div class="nextContent">
+        <div class="character">
+          <div class="penguin" v-if=" this.loQuestion-1 > counter"
+            :class="character ? 'feedbacktrue' : 'feedbackfalse'"></div>
+          <div class="progress" v-if="counter >= this.loQuestion-1">
+            <!-- <div v-if="counter >= this.loQuestion-1">{{()}}</div> -->
+            <!-- <ng-lottie [options]="progressbar" (animationCreated)="progressBar($event);calculate()">
+                  </ng-lottie> -->
+          </div>
+          <div class="type" v-if="counter >= this.loQuestion-1"> {{Estimation}}</div>
+          <div class="penguin feedbackfalse" v-if="counter >= this.loQuestion-1 && 20 >= this.finish"></div>
+          <div class="penguin feedbacktrue" v-if="counter >= this.loQuestion-1 && this.finish > 20"></div>
+
+          <div class="buttons">
+            <button class="home" @click="home()"></button>
+            <button class="next" @click="nextQuestion(); " v-if="this.loQuestion-1 > counter"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/animation.js"></script>
+</body>
