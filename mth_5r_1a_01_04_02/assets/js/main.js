@@ -442,7 +442,7 @@ new Vue({
             if (this.counter > 0) {
                 setTimeout(() => {
                     this.sound.play()
-                }, 1500)
+                }, 500)
                 this.soundPlay()
             }
             if (this.questionsNumber != this.counter) {
@@ -473,7 +473,7 @@ new Vue({
                     setTimeout(() => {
                         this.sound.play()
                         this.screenClick = 0
-                    }, 1500)
+                    }, 10)
                 }
             }, 1000)
         },
@@ -666,6 +666,7 @@ new Vue({
             this.nextHand = false
             this.character = false
             this.question = true
+            this.sound.paused()
             this.calculate()
         },
         home() {
