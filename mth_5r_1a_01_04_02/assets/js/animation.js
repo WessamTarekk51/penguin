@@ -22,4 +22,3 @@ let progressbar = bodymovin.loadAnimation({
 
 progressbar.goToAndStop(0, false);
 // infoScreen.playSegments([0, 80], true);
-console.log( document.getElementById('progressbar'))

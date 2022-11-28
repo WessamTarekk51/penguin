@@ -388,11 +388,16 @@ new Vue({
     },
     created() {
         this.shuffle(this.posts[0].items)
+        console.log(this.posts[0])
         this.nextQuestion()
         this.wrongAnswer.src = './assets/audios/wronganswer.mp3'
         this.rightAnswer.src = './assets/audios/rightanswer.mp3'
     },
-    mounted() {},
+    mounted() {
+        this.posts[0].numberOfquestion = this.loQuestion
+        console.log(this.posts[0].numberOfquestion)
+        finalResponse.submitData(JSON.stringify(this.posts[0]), 1);
+    },
     methods: {
         start() {
             penguinCharacter.playSegments([0, 50], true);
@@ -416,7 +421,7 @@ new Vue({
             this.counter += 1
             console.log(this.counter)
             console.log(this.helpHand)
-            
+            console.log( this.posts[0].numberOfquestion)
             this.answers = []
             this.checkBtn = 0
             this.question = false
@@ -654,6 +659,7 @@ new Vue({
             this.btNext[0]?.classList.remove('btn-next')
             this.btNext[0]?.classList.add('btn-next-active')
             this.nextHand = true
+            this.finished()
         },
         next() {
             this.nextHand = false
@@ -732,9 +738,12 @@ new Vue({
         },
         isAllQuestionsRight(){
             this.btAnswer[0]?.classList.add('pointer-none')
+            this.posts[0].counterCorrect++;
+            console.log(this.posts[0].counterCorrect)
             this.character = true
                 this.rightAnswer.play()
                 penguinCharacter.playSegments([130, 195])
+                this.finished()
             setTimeout(() => {
                 this.click = true
                 penguinCharacter.playSegments([0, 50])
@@ -743,6 +752,12 @@ new Vue({
                 this.screenClick = 0
                 this.question = true
             }, 4000)
+        },
+        finished() {
+            this.posts[0].counterCorrect === this.posts[0].numberOfquestion ?
+                finalResponse.submitData(JSON.stringify(this.posts[0]), 4) :
+                finalResponse.submitData(JSON.stringify(this.posts[0]), 1);
+
         }
         
     }
