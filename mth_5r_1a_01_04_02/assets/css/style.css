@@ -282,6 +282,7 @@ body .Logo {
           align-items: center;
   display: none;
   margin-right: 13vh;
+  margin-bottom: 4vh;
   pointer-events: auto;
 }
 .digital-screen .penguin .border .question .type-question {
@@ -494,7 +495,7 @@ body .Logo {
 
 .image {
   width: 3vh;
-  height: 26vh;
+  height: 31vh;
   padding-right: 5vh;
 }
 
