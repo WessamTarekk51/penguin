@@ -622,6 +622,7 @@ new Vue({
             }
         },
         answer() {
+            this.helpHand =false
             this.posts[0].items.filter((el) => {
                 if (el.active) {
                   this.content = el.content;
