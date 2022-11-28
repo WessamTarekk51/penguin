@@ -319,11 +319,11 @@ body .Logo {
   background-repeat: no-repeat;
   background-size: contain;
   border: 0;
-  width: 11vh;
-  height: 6vh;
+  width: 13vh;
+  height: 7vh;
   background-color: unset;
   outline: none;
-  font-size: 2.5vw;
+  font-size: 3vh;
   text-align: center;
   font-weight: bold;
   color: white;
@@ -393,6 +393,23 @@ body .Logo {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.nextContent .character .progress {
+  width: 56vh;
+  height: 10vh;
+}
+.nextContent .character .progress #progressbar {
+  position: relative;
+}
+.nextContent .character .progress .finish {
+  position: absolute;
+  top: 4.5vh;
+  z-index: 100;
+  font-size: 2.3vh;
+  left: 2.2vh;
+  color: #22649C !important;
+  font-weight: bold;
+  font-family: ArialRounded;
+}
 .nextContent .character .penguin {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -407,17 +424,21 @@ body .Logo {
   width: 35vh;
   height: 33vh;
 }
-.nextContent .character .type {
-  margin-top: 1vh;
+.nextContent .character .border {
+  margin-bottom: 22vh;
+}
+.nextContent .character .border .type {
+  margin-bottom: 3vh;
   font-size: 5vh;
+  font-family: samim;
   color: #22649C !important;
   font-weight: bold;
-  background-image: url(../images//penguin/estimationBk.png);
+  background-image: url(../images//penguin/estimationbk.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 3vh;
-  width: 26vh;
-  height: 5vh;
+  width: 31vh;
+  height: 6vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

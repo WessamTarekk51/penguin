@@ -306,11 +306,11 @@ body {
           background-repeat: no-repeat;
           background-size: contain;
           border: 0;
-          width: 11vh;
-          height: 6vh;
+          width: 13vh;
+          height: 7vh;
           background-color: unset;
           outline: none;
-          font-size: 2.5vw;
+          font-size: 3vh;
           text-align: center;
           font-weight: bold;
           color: #ffff;
@@ -375,9 +375,27 @@ body {
     align-items: center;
     flex-direction: column;
 
+    .progress {
+      width: 56vh;
+      height: 10vh;
+      #progressbar{
+        position: relative;
+      }
 
+      .finish {
+        position: absolute;
+        top: 4.5vh;
+        z-index: 100;
+        font-size: 2.3vh;
+        left: 2.2vh;
+        color: #22649C !important;
+        font-weight: bold;
+        font-family: ArialRounded;
+
+      }
+    }
     .penguin {
-     
+
       background-size: 100% 100%;
       background-repeat: no-repeat;
 
@@ -395,21 +413,27 @@ body {
       }
 
     }
+    .border {
+      margin-bottom: 22vh;
 
-    .type {
-      margin-top: 1vh;
-      font-size: 5vh;
-      color: #22649C !important;
-      font-weight: bold;
-      background-image: url(../images//penguin/estimationBk.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      padding: 3vh;
-      width: 26vh;
-      height: 5vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    
+
+      .type {
+        margin-bottom: 3vh;
+        font-size: 5vh;
+        font-family: samim;
+        color: #22649C !important;
+        font-weight: bold;
+        background-image: url(../images//penguin/estimationbk.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 3vh;
+        width: 31vh;
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
 
@@ -459,6 +483,7 @@ body {
 .break {
   flex-basis: 100%;
 }
+
 
 
 

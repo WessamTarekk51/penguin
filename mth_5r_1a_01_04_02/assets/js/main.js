@@ -21,7 +21,7 @@ new Vue({
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرب العدد 45.29 لأقرب جزء من عشرة."],
+                    parag: ["قرب العدد <span class='number'>45.29</span> لأقرب جزء من عشرة."],
                     parag2: "45.3",
                     parag3: "45.2",
                     parag4: "45.29 ≈ ",
@@ -48,7 +48,7 @@ new Vue({
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 16.2 لأقرب عدد صحيح."],
+                    parag: ["قرِّب العدد <span class='number'>16.2</span> لأقرب عدد صحيح."],
                     parag2: "17",
                     parag3: "16",
                     parag4: "16.2 ≈ ",
@@ -75,7 +75,7 @@ new Vue({
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 2.384 لأقرب جزء من مائة."],
+                    parag: ["قرِّب العدد <span class='number'>2.384</span> لأقرب جزء من مائة."],
                     parag2: "2.390",
                     parag3: "2.380",
                     parag4: "2.384 ≈ ",
@@ -96,13 +96,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:4,
+                    id:3,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 3.576 لأقرب جزء من مائة."],
+                    parag: ["قرِّب العدد <span class='number'>3.576</span> لأقرب جزء من مائة."],
                     parag2: "3.60",
                     parag3: "3.50",
                     parag4: "3.576 ≈ ",
@@ -123,13 +123,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:5,
+                    id:2,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 2.5 لأقرب عدد صحيح."],
+                    parag: ["قرِّب العدد <span class='number'>2.5</span> لأقرب عدد صحيح."],
                     parag2: "3.0",
                     parag3: "2.0",
                     parag4: "2.5 ≈ ",
@@ -150,13 +150,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:6,
+                    id:3,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 1.277 لأقرب جزء من مائة."],
+                    parag: ["قرِّب العدد <span class='number'>1.277</span> لأقرب جزء من مائة."],
                     parag2: "1.28",
                     parag3: "1.27",
                     parag4: "1.277 ≈ ",
@@ -177,13 +177,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:7,
+                    id:2,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 65.8 لأقرب عدد صحيح."],
+                    parag: ["قرِّب العدد <span class='number'>65.8</span> لأقرب عدد صحيح."],
                     parag2: "66.0",
                     parag3: "65.0",
                     parag4: "65.8 ≈ ",
@@ -204,13 +204,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:8,
+                    id:1,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 45.54 لأقرب جزء من عشرة."],
+                    parag: ["قرِّب العدد <span class='number'>45.54</span> لأقرب جزء من عشرة."],
                     parag2: "45.60",
                     parag3: "45.50",
                     parag4: "45.54 ≈ ",
@@ -231,13 +231,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:9,
+                    id:3,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 3.576 لأقرب جزء من مائة."],
+                    parag: ["قرِّب العدد <span class='number'>3.576</span> لأقرب جزء من مائة."],
                     parag2: "10.0",
                     parag3: "9.90",
                     parag4: "9.999 ≈ ",
@@ -258,13 +258,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:10,
+                    id:1,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 1.07 لأقرب جزء من عشرة."],
+                    parag: ["قرِّب العدد <span class='number'>1.07</span> لأقرب جزء من عشرة."],
                     parag2: "1.10",
                     parag3: "1.00",
                     parag4: "1.07 ≈ ",
@@ -285,13 +285,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:11,
+                    id:3,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 1.209 لأقرب جزء من مائة."],
+                    parag: ["قرِّب العدد <span class='number'>1.209</span> لأقرب جزء من مائة."],
                     parag2: "1.210",
                     parag3: "1.200",
                     parag4: "1.209 ≈ ",
@@ -312,13 +312,13 @@ new Vue({
                 },
                 {
                     type: 1,
-                    id:12,
+                    id:2,
                     active: false,
                     numberOfquestion: 0,
                     correctCounter: 0,
                     numOfAttempts: 0,
                     image: "./assets/question/1.png",
-                    parag: ["قرِّب العدد 5.4 لأقرب عدد صحيح."],
+                    parag: ["قرِّب العدد <span class='number'>5.4</span> لأقرب عدد صحيح."],
                     parag2: "6.0",
                     parag3: "5.0",
                     parag4: "5.4 ≈ ",
@@ -389,8 +389,8 @@ new Vue({
     created() {
         this.shuffle(this.posts[0].items)
         this.nextQuestion()
-        this.wrongAnswer.src = './assets/audios/WrongAnswer.mp3'
-        this.rightAnswer.src = './assets/audios/RightAnswer.mp3'
+        this.wrongAnswer.src = './assets/audios/wronganswer.mp3'
+        this.rightAnswer.src = './assets/audios/rightanswer.mp3'
     },
     mounted() {},
     methods: {
@@ -401,7 +401,7 @@ new Vue({
             this.startLo = true
             setTimeout(() => {
               this.sound.src =
-                './assets/audios/Q/Q' + this.posts[0].items[this.counter].id + '.mp3'
+                './assets/audios/q/q' + this.posts[0].items[this.counter].id + '.mp3'
               this.sound.play()
             }, 1000)
             this.soundPlay()
@@ -422,7 +422,7 @@ new Vue({
             this.question = false
             this.click = false
             this.sound.src =
-                './assets/audios/Q/Q' + this.posts[0].items[this.counter].id + '.mp3'
+                './assets/audios/q/q' + this.posts[0].items[this.counter].id + '.mp3'
             this.btCheck = document.getElementsByClassName('check')
             this.btAnswer = document.getElementsByClassName('answer')
             this.btNext = document.getElementsByClassName('next')
@@ -605,7 +605,7 @@ new Vue({
             })
 
             if (this.falseBox.length === 0) {
-                this.isAllQuestionsRight();
+                // this.isAllQuestionsRight();
 
             } else {
                 this.wrongAnswer.play()
@@ -695,7 +695,7 @@ new Vue({
         },
         calculate() {
             // console.log("norhan" +this.result )
-            // this.result=0
+            this.result=0
             this.posts[0].items.forEach((el) => {
                 if (el.correctCounter == el.numberOfquestion) {
                     this.result +=1; 
@@ -703,38 +703,46 @@ new Vue({
             })
             this.finish = (this.result * 100) / this.loQuestion
             console.log(this.finish)
-            if (this.finish >= 0 && this.finish <= 50) {
+            if (this.finish == 0 ) {
                 console.log('ضعيف')
                 this.Estimation = 'ضعيف';
-                // penguinCharacter.playSegments([0, 20])
+                progressbar.playSegments([0, 1],true)
+            }
+            if (this.finish >= 1 && this.finish <= 50) {
+                console.log('ضعيف')
+                this.Estimation = 'ضعيف';
+                progressbar.playSegments([0, 57],true)
             }
             if (this.finish >= 51 && this.finish <= 64) {
                 console.log('مقبول')
                 this.Estimation = 'مقبول'
+                progressbar.playSegments([0, 69],true)
             }
             if (this.finish >= 65 && this.finish <= 84) {
                 console.log('جيد ')
+                progressbar.playSegments([0, 84],true)
                 this.Estimation = 'جيد'
             }
             if (this.finish >= 85 && this.finish <= 100) {
                 console.log('يفوق التوقعات ')
+                progressbar.playSegments([0, 101],true)
                 this.Estimation = 'يفوق التوقعات '
             }
-            
+
         },
         isAllQuestionsRight(){
             this.btAnswer[0]?.classList.add('pointer-none')
             this.character = true
                 this.rightAnswer.play()
                 penguinCharacter.playSegments([130, 195])
-                this.calculate()
             setTimeout(() => {
                 this.click = true
                 penguinCharacter.playSegments([0, 50])
-                this.question = true
+                this.calculate()
                 clearInterval(this.setInterval)
                 this.screenClick = 0
-            }, 3000)
+                this.question = true
+            }, 4000)
         }
         
     }
