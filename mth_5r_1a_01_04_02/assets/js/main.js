@@ -622,6 +622,8 @@ new Vue({
             }
         },
         answer() {
+            this.clickBtn.src = './assets/audios/click_btn.mp3'
+            this.clickBtn.play()
             this.helpHand =false
             this.posts[0].items.filter((el) => {
                 if (el.active) {
@@ -663,10 +665,11 @@ new Vue({
             this.finished()
         },
         next() {
+            this.clickBtn.src = './assets/audios/click_btn.mp3'
+            this.clickBtn.play()
             this.nextHand = false
             this.character = false
             this.question = true
-            this.sound.paused()
             this.calculate()
         },
         home() {
@@ -743,6 +746,8 @@ new Vue({
             this.posts[0].counterCorrect++;
             console.log(this.posts[0].counterCorrect)
             this.character = true
+            this.checkHand = false
+
                 this.rightAnswer.play()
                 penguinCharacter.playSegments([130, 195])
                 this.finished()
