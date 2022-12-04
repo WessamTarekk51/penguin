@@ -341,6 +341,10 @@ body .Logo {
   background-image: url(../images/penguin/displayinput.png);
   pointer-events: none;
 }
+.digital-screen .penguin .border .question input.inactive {
+  pointer-events: none;
+  background-image: url(../images/penguin/inactive.png) !important;
+}
 .digital-screen .penguin .penguinCharacter {
   position: relative;
   left: -2%;

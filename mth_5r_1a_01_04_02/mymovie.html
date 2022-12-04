@@ -10,7 +10,7 @@
   <script src="./assets/js/vue.js"></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel='icon' href='./assets/images/penguin/favicon.ico' type='image/x-icon' />
-  <script src="../../../js/submit_sender.js"></script>
+  <script src="./assets/js/submit_sender.js"></script>
 
 </head>
 
@@ -43,7 +43,7 @@
               <div class="flex">
                 <div class="center">
                   <template v-if="item.type==1">
-                    <input class="emptyInput number input number" type="text" index="1" @keyup="maxLength($event, item)"
+                    <input class="number input emptyInput" type="text" index="1" @keyup="maxLength($event, item)"
                       inputType="1" @change="checkvalue($event,item)" @focus="focusin($event)" @click="foucs($event);"
                       maxlength="1" @focusout="focusout($event)">
                     <div class="help  help-input" v-if="counter == 0 && helpHand"></div>
@@ -66,7 +66,7 @@
               </div>
               <p class="number" v-html="item.parag4"></p>
               <template v-if="item.type==1">
-                <input class="emptyInput number input number" type="text" index="2" @keyup="maxLength($event, item)"
+                <input class="inactive number input number" type="text" index="2" @keyup="maxLength($event, item)"
                   inputType="1" @change="checkvalue($event,item)" @focus="focusin($event)" @click="foucs($event);"
                   maxlength="1" @focusout="focusout($event)">
               </template>

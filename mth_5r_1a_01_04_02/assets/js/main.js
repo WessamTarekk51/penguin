@@ -384,7 +384,8 @@ new Vue({
         Estimation: null,
         answers: [],
         showAnswers: [],
-        test : number =0
+        test : number =0,
+        inactiveInputs:null
     },
     created() {
         this.shuffle(this.posts[0].items)
@@ -516,7 +517,7 @@ new Vue({
                 el.value == '' ? this.checkBtn++ : false
                 // console.log('checkBtn = ' + this.checkBtn)
               })
-             if (this.checkBtn == 0) {
+             if (this.checkBtn - 1  == 0) {
                this.checkHand = true
              } else {
                this.checkHand = false
@@ -533,6 +534,8 @@ new Vue({
 
         },
         checkvalue(event, element) {
+            this.inactiveInputs = document.querySelectorAll(".active .inactive");
+            console.log(this.inactiveInputs.length);
             if (element.type == 1) {
                 for (const el of element.content[this.index - 1].input.valid) {
                     if (el === event.target.value.trim()) {
@@ -577,6 +580,21 @@ new Vue({
                 }
             })
             console.log("num of test = " + this.test)
+            console.log("numberOfquestions" +  element.numberOfquestion)
+
+            if (this.test === element.numberOfquestion - this.inactiveInputs.length) {
+                this.inactiveInputs.forEach((el) => {
+                  el.classList.remove("inactive");
+                  el.classList.add("activeInput");
+
+
+                });
+              }
+        
+              if (this.test === element.numberOfquestions) {
+                this.isAllQuestionsRight();
+                this.finished();
+              }
         },
      
         checkanswer() {
@@ -608,11 +626,14 @@ new Vue({
                 elem.classList.add('emptyInput')
 
             })
-
-            if (this.falseBox.length === 0) {
+            if (this.falseBox.length === 0 && this.inactiveInputs.length == 0) {
                 // this.isAllQuestionsRight();
+            } 
+            else if(this.falseBox.length === 0){
+                penguinCharacter.playSegments([130, 195])
 
-            } else {
+            }
+            else {
                 this.wrongAnswer.play()
                 this.character = false
                 penguinCharacter.playSegments([265, 350])
@@ -622,6 +643,14 @@ new Vue({
             }
         },
         answer() {
+            document.querySelectorAll(".active .activeInput").forEach((el) => {
+                el.classList.remove("activeInput");
+                el.classList.add("emptyInput");
+              });
+              document.querySelectorAll(".active .inactive").forEach((el) => {
+                el.classList.remove("inactive");
+                el.classList.add("emptyInput");
+              });
             this.clickBtn.src = './assets/audios/click_btn.mp3'
             this.clickBtn.play()
             this.helpHand =false
@@ -676,6 +705,7 @@ new Vue({
             location.reload()
         },
         focusin(event) {
+                        penguinCharacter.playSegments([0, 50])
             this.helpHand = false
             if (
                 /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(

@@ -332,6 +332,10 @@ body {
             background-image: url(../images/penguin/displayinput.png);
             pointer-events: none;
           }
+          &.inactive{
+            pointer-events: none;
+            background-image: url(../images/penguin/inactive.png) !important;
+          }
         }
 
       }
